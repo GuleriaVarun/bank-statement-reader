@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'statement-reader';
+  onboardingComplete: boolean = false;
+  
+  addItem(ev: any) {
+    console.log('*************** Got event : ', ev);
+    this.onboardingComplete = ev;
+  }
 }

@@ -2,8 +2,12 @@
   <div class="content">
     <div class="right-side">
       <div style="height: 80%; overflow-y: auto;">
-        <app-navbar></app-navbar>
-        <app-excel-reader></app-excel-reader>
+        <app-onboarding *ngIf="!onboardingComplete" (newItemEvent)="addItem($event)"></app-onboarding>
+
+        <div *ngIf="onboardingComplete">
+          <app-navbar></app-navbar>
+          <app-excel-reader></app-excel-reader>
+        </div>
       </div>
     </div>
   </div>

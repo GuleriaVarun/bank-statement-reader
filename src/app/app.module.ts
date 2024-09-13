@@ -12,13 +12,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { OnboardingComponent } from './components/onboarding/onboarding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExcelReaderComponent,
     OverviewComponent,
-    NavbarComponent
+    NavbarComponent,
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,

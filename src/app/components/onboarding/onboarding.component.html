@@ -1,0 +1,13 @@
+<!-- onboarding.component.html -->
+<div class="onboarding-container">
+    <div class="slide" *ngIf="slides.length">
+      <img [src]="slides[currentSlideIndex].svg" alt="Feature Image" class="feature-image">
+      <h2>{{ slides[currentSlideIndex].title }}</h2>
+      <p>{{ slides[currentSlideIndex].description }}</p>
+      <div class="navigation-buttons">
+        <button (click)="prevSlide()" [disabled]="currentSlideIndex === 0">Previous</button>
+        <button (click)="nextSlide()" [disabled]="currentSlideIndex === slides.length - 1">Next</button>
+      </div>
+    </div>
+</div>
+  
