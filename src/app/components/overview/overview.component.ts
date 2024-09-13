@@ -60,17 +60,18 @@ export class OverviewComponent implements OnInit {
     if (this.data) {
       this.data.forEach((data) => {
         let category = '';
-        let spent = data.withdrawlAmount as any;
+        let spent = Number(data.withdrawlAmount);
 
         if (data.title.includes('SALARY')) {
           return;
         }
 
         if (
-          data.title.includes('ZOMATO') ||
-          data.title.includes('SWIGGY') ||
-          data.title.includes('DOMINOS') ||
-          data.title.includes('UBEREATS')
+          data.title.toLocaleUpperCase().includes('ZOMATO') ||
+          data.title.toLocaleUpperCase().includes('SWIGGY') ||
+          data.title.toLocaleUpperCase().includes('DOMINOS') ||
+          data.title.toLocaleUpperCase().includes('UBEREATS') ||
+          data.title.toLocaleUpperCase().includes('EATCLUB')
         ) {
           category = 'Food Ordered';
         } else if (
@@ -80,38 +81,38 @@ export class OverviewComponent implements OnInit {
         ) {
           category = 'Savings';
         } else if (
-          data.title.includes('OLACABS') ||
-          data.title.includes('UBER')
+          data.title.toLocaleUpperCase().includes('OLACABS') ||
+          data.title.toLocaleUpperCase().includes('UBER')
         ) {
           category = 'Travel';
         } else if (
-          data.title.includes('INSTAMART') ||
-          data.title.includes('ZEPTO') ||
-          data.title.includes('BIGBASKET') ||
-          data.title.includes('SPAR')
+          data.title.toLocaleUpperCase().includes('INSTAMART') ||
+          data.title.toLocaleUpperCase().includes('ZEPTO') ||
+          data.title.toLocaleUpperCase().includes('BIGBASKET') ||
+          data.title.toLocaleUpperCase().includes('SPAR')
         ) {
           category = 'Grocery';
         } else if (data.title.includes('CNRB0002518')) {
           category = 'Rent';
         } else if (
-          data.title.includes('APOLLO') ||
-          data.title.includes('PHARMA')
+          data.title.toLocaleUpperCase().includes('APOLLO') ||
+          data.title.toLocaleUpperCase().includes('PHARMA')
         ) {
           category = 'Medicines';
         } else if (data.title.includes('VARUN GULERIA-SBIN')) {
           category = 'Loan';
-        } else if (data.title.includes('BOOKMYSHOW')) {
+        } else if (data.title.toLocaleUpperCase().includes('BOOKMYSHOW')) {
           category = 'Movies';
         } else if (
-          data.title.includes('UPI-AIRTEL') ||
-          data.title.includes('AIRTEL') ||
-          data.title.includes('JIO')
+          data.title.toLocaleUpperCase().includes('UPI-AIRTEL') ||
+          data.title.toLocaleUpperCase().includes('AIRTEL') ||
+          data.title.toLocaleUpperCase().includes('JIO')
         ) {
           category = 'Mobile Recharge';
         } else if (
-          data.title.includes('PAY-AMAZONUPI') ||
-          data.title.includes('AMAZON') ||
-          data.title.includes('FLIPKART')
+          data.title.toLocaleUpperCase().includes('PAY-AMAZONUPI') ||
+          data.title.toLocaleUpperCase().includes('AMAZON') ||
+          data.title.toLocaleUpperCase().includes('FLIPKART')
         ) {
           category = 'Amazon / Flipkart';
         } else {

@@ -5,8 +5,8 @@
       <h2>{{ slides[currentSlideIndex].title }}</h2>
       <p>{{ slides[currentSlideIndex].description }}</p>
       <div class="navigation-buttons">
-        <button (click)="prevSlide()" [disabled]="currentSlideIndex === 0">Previous</button>
-        <button (click)="nextSlide()" [disabled]="currentSlideIndex === slides.length - 1">Next</button>
+        <button class="button-13" (click)="prevSlide()" [disabled]="currentSlideIndex === 0">Previous</button>
+        <button class="button-13" (click)="nextSlide()" [disabled]="currentSlideIndex === slides.length - 1">Next</button>
       </div>
     </div>
 </div>

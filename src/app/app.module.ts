@@ -13,6 +13,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { OnboardingComponent } from './components/onboarding/onboarding.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { OnboardingComponent } from './components/onboarding/onboarding.componen
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSelectModule,
     CanvasJSAngularChartsModule
   ],
   providers: [

@@ -1,12 +1,22 @@
 <div class="dropFile">
   <h6>Import your bank statement</h6>
   <div class="notation">(*Excel supported)</div>
-  <input type="file" (change)="onFileChange($event)" />
+
+  <h6>Select your bank</h6>
+  <mat-form-field>
+    <mat-label>Choose an option</mat-label>
+    <mat-select [(value)]="selectedBank">
+      @for (option of banks; track option) {
+      <mat-option [value]="option.value">{{ option.viewValue }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <input *ngIf="selectedBank" type="file" (change)="onFileChange($event)" />
 </div>
 
 <div *ngIf="tableData[0]" class="reader-content">
   <div class="center">
-    <h4>Welcome, {{accountDetails.holderName}}</h4>
+    <h4>Welcome, {{ accountDetails.holderName }}</h4>
   </div>
   <div class="table-content">
     <div class="mat-elevation-z8">
