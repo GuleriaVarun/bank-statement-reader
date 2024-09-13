@@ -1,0 +1,23 @@
+.chart-panel {
+    margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+.box {
+    height: auto;
+    padding: 50px;
+}
+.row {
+    display: flex;
+    flex-wrap:wrap;
+}
+.cell {
+    flex: 1 1 200px;
+}
+
+.summary {
+    background-color: azure;
+    text-align: center;
+    margin: 3em;
+}

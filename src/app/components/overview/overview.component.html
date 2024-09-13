@@ -1,0 +1,25 @@
+<div class="box">
+    <div class="row">
+        <div class="cell">
+            <canvasjs-chart
+        [options]="pieChartOptions"
+        [styles]="{height: '360px' }"
+        ></canvasjs-chart>
+        </div>
+        <div class="cell">
+            <canvasjs-chart
+        [options]="pieChartOptions2"
+        [styles]="{height: '360px' }"
+        ></canvasjs-chart>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div>
+            <span>Your total spent: Rs. {{totalSpent}}</span>
+        </div>
+        <div>
+            <span>Your total spent on saving / loans : Rs. {{totalSaved}}</span>
+        </div>
+    </div>
+</div>
