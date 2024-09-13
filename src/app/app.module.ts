@@ -8,18 +8,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { OverviewComponent } from './components/overview/overview.component';
-import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExcelReaderComponent,
     OverviewComponent,
-    CanvasJSChart,
     NavbarComponent
   ],
   imports: [
@@ -28,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [
     provideAnimationsAsync()
