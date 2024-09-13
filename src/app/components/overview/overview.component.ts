@@ -15,6 +15,7 @@ export class OverviewComponent implements OnInit {
   @Input() public data!: BankStatement[];
   totalSpent: number = 0;
   totalSaved: number = 0;
+  remainingBalance: string = '';
 
   pieChartOptions = {
     animationEnabled: true,
@@ -159,6 +160,8 @@ export class OverviewComponent implements OnInit {
       this.totalSaved = chartDataSavings.reduce(function (acc, obj) {
         return acc + obj.y;
       }, 0);
+
+      this.remainingBalance = this.data[this.data.length - 1].closingBalance;
     }
   }
 }

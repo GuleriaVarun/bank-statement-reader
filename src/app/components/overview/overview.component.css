@@ -1,23 +1,39 @@
 .chart-panel {
-    margin: auto;
+  margin: auto;
   width: 60%;
   text-align: center;
 }
 
 .box {
-    height: auto;
-    padding: 50px;
+  height: auto;
+  padding: 50px;
 }
 .row {
-    display: flex;
-    flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cell {
-    flex: 1 1 200px;
+  flex: 1 1 200px;
 }
 
 .summary {
-    background-color: azure;
-    text-align: center;
-    margin: 3em;
+  background-color: azure;
+  text-align: center;
+  margin-top: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  font-size: 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #d6eeee;
 }

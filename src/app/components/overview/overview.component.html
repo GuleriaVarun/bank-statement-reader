@@ -13,13 +13,19 @@
         ></canvasjs-chart>
         </div>
     </div>
+</div>
 
-    <div class="summary">
-        <div>
-            <span>Your total spent: Rs. {{totalSpent}}</span>
-        </div>
-        <div>
-            <span>Your total spent on saving / loans : Rs. {{totalSaved}}</span>
-        </div>
-    </div>
+<div class="summary">
+    <table>
+          <tr>
+            <th>Total Spent</th>
+            <th>Total Spent on Savings / Loan / Rent</th>
+            <th>Remaining Balance</th>
+          </tr>
+          <tr>
+            <td>{{totalSpent}}</td>
+            <td>{{totalSaved}}</td>
+            <td>{{remainingBalance}}</td>
+          </tr>
+      </table>
 </div>
