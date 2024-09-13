@@ -10,7 +10,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { OverviewComponent } from './components/overview/overview.component';
 import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
 var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -21,8 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
     ExcelReaderComponent,
     OverviewComponent,
     CanvasJSChart,
-    NavbarComponent,
-    FooterComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
